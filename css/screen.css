@@ -575,7 +575,7 @@ input::placeholder {
     border: var(--global-input-borderWidth) solid var(--global-input-borderColor);
     border-radius: var(--global-borderRadius);
     color: var(--global-input-color);
-    background-color: var(--global-input-backgroundColor);
+    background-color: var(--global-backgroundColor);
     font-family: inherit;
     font-size: 1rem;
     line-height: calc(var(--global-baseline) * 3);
@@ -662,6 +662,7 @@ input::placeholder {
 
 .c-custom-option__symbol {
     opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .c-custom-option__fake-input--checkbox .c-custom-option__symbol {
@@ -700,6 +701,8 @@ input::placeholder {
     display: flex;
     align-content: start;
     margin-bottom: var(--global-whitespace-xs);
+    --custom-option-borderColor: var(--global-input-borderColor);
+    --custom-option-focus-borderColor: var(--global-input-focus-borderColor);
 }
 
 .c-option--hidden:checked+.c-custom-option .c-custom-option__symbol {
@@ -715,6 +718,52 @@ input::placeholder {
     align-items: center;
     justify-content: center;
 }
+.c-option-list{
+    margin-bottom: 24px;
+}
+.c-option-list__item{
+    margin-bottom: 12px;
+}
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: var(--global-color-neutral-950);
+    }
+    .c-logo__path--1 {
+        fill: var(--global-color-neutral-050);
+    }
+    
+    .c-logo__path--2 {
+        fill: var(--global-color-neutral-050);
+    }
+    
+    .c-logo__path--3 {
+        fill: var(--global-color-neutral-050);
+    }
+    .c-card{
+        background-color: var(--global-color-neutral-900);
+    }
+    .c-card__title{
+        color: var(--global-color-neutral-050);
+    }
+    .c-label{
+        color: var(--global-color-neutral-400);
+    }
+    .c-input{
+        background-color: var(--global-color-neutral-950);
+        border: none;
+    }
+    .c-card__footer{
+        border-top: 1px solid var(--global-color-neutral-950);
+    }
+    .c-custom-option__fake-input{
+        background-color: var(--global-color-neutral-950);
+        border: none;
+    }
+}
+
+/* Custom toggle */
+
+
 /**/
 
 
